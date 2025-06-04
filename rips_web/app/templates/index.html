@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador RIPS JSON</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+    <div class="container mt-4">
+        <h2 class="text-primary">Generador RIPS JSON – Resolución 2275 de 2023</h2>
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Documento Facturador</label>
+                    <input type="text" name="numDocumentoIdObligado" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Número Factura</label>
+                    <input type="text" name="numFactura" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Código Prestador</label>
+                    <input type="text" name="codPrestador" class="form-control" required>
+                </div>
+            </div>
+
+            <h5 class="mt-4">Datos del Usuario</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Tipo Documento</label>
+                    <input type="text" name="tipoDocumentoIdentificacion" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Número Documento</label>
+                    <input type="text" name="numDocumentoIdentificacion" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Sexo</label>
+                    <input type="text" name="codSexo" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Fecha Nacimiento</label>
+                    <input type="date" name="fechaNacimiento" class="form-control" required>
+                </div>
+            </div>
+
+            <h5 class="mt-4">Consulta Básica</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Fecha Atención</label>
+                    <input type="date" name="fechaInicioAtencion" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Código Consulta</label>
+                    <input type="text" name="codConsulta" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Valor Servicio</label>
+                    <input type="number" step="0.01" name="vrServicio" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mt-4">
+                <button type="submit" class="btn btn-primary">👁️ Previsualizar JSON</button>
+                <button formaction="/descargar" formmethod="post" class="btn btn-success">📤 Descargar JSON</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
